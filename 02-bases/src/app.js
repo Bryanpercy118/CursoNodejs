@@ -7,9 +7,11 @@
 // const person = { name: 'Bryan Percy', birthdate: '1998-03-24' };
 // const newPerson = makePerson(person);
 // console.log(newPerson); fin del factory
-
+const { buildLogger } = require('./plugins');
 const getPokemonById = require('./js-foundation/06-promises');
 
+const logger = buildLogger('app.js');
+logger.log('Hola mundo');
 getPokemonById(1)
     .then((pokemon) => console.log(pokemon))
     .catch((error) => console.error(error));
